@@ -11,17 +11,8 @@ plt.switch_backend('agg')
 path = 'data/train.csv'
 
 
-def q02_len_questions(path):
-    "write your solution here"
-    length, mean_duplicate, duplicate_count, df_train = q01_load_data_questions(path)
-    qids = pd.Series(df_train['qid1'].tolist() + df_train['qid2'].tolist())
-    plt.figure(figsize=(12, 5))
-    plt.hist(qids.value_counts(), bins=50)
-    plt.yscale('log', nonposy='clip')
-    plt.title('Log-Histogram of question appearance counts')
-    plt.xlabel('Number of occurences of question')
-    plt.ylabel('Number of questions')
-    plt.show()
+def q02_len_questions():
+    
 
 
 
